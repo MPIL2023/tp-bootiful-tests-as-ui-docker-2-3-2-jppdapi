@@ -18,24 +18,24 @@ class TestAdderService {
 	private AdderService adderService;
 
 	@Test
-	public void contextLoads() {
+	private void contextLoads() {
 		assertThat(adderService).isNotNull();
 	}
 
 	@Test
 	@Order(1)
-	public void currentAtStart() {
-		assertThat(adderService.currentBase()).isEqualTo(0);
+	private void currentAtStart() {
+		assertThat(adderService.currentBase()).isZero();
 	}
 
 	@Test
-	public void setBase() {
+	private void setBase() {
 		adderService.baseNum(10);
 		assertThat(adderService.currentBase()).isEqualTo(10);
 	}
 
 	@Test
-	public void add() {
+	private void add() {
 		adderService.baseNum(10);
 		assertThat(adderService.add(10)).isEqualTo(20);
 
@@ -43,7 +43,7 @@ class TestAdderService {
 	}
 
 	@Test
-	public void accumulate() {
+	private void accumulate() {
 		adderService.baseNum(10);
 		assertThat(adderService.accumulate(10)).isEqualTo(20);
 		assertThat(adderService.currentBase()).isEqualTo(20);

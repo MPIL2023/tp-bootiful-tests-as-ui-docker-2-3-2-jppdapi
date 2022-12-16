@@ -23,7 +23,7 @@ class TestAdderController {
 
 	@Test
 	@Order(1)
-	public void current() {
+	private void current() {
 		assertThat(restTemplate.getForObject(
 				"http://localhost:" + port + "/adder/current",
 				String.class
@@ -31,7 +31,7 @@ class TestAdderController {
 	}
 
 	@Test
-	public void add() {
+	private void add() {
 		assertThat(restTemplate.postForObject(
 				"http://localhost:" + port + "/adder",
 				1,
@@ -45,7 +45,7 @@ class TestAdderController {
 	}
 
 	@Test
-	public void accumulate() {
+	private void accumulate() {
 		assertThat(restTemplate.postForObject(
 				"http://localhost:" + port + "/adder/acc",
 				1,

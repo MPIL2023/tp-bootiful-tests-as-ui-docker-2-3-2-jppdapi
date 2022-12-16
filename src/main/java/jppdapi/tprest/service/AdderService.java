@@ -20,6 +20,7 @@ public class AdderService {
     }
 
     public int accumulate(int adder) {
-        return this.num += adder;
+        this.num += adder;
+        return this.num;
     }
 }
