@@ -1,1 +1,36 @@
+<fieldset>
+  <legend>Récuperation du nombre</legend>
+  <p>
+    <button (click)="getCurrent()">Recupérais le nombre acutel</button>
+  </p>
+  <label>
+    Nombre actuel
+    <p id="current"></p>
+  </label>
+</fieldset>
+
+<fieldset>
+  <legend>Ajouté au courrent</legend>
+  <p>
+    <input type="number" id="add-input">
+    <button (click)="add()">Calculé</button>
+  </p>
+  <label>
+    Nombre obtenue
+    <p id="add"></p>
+  </label>
+</fieldset>
+
+<fieldset>
+  <legend>Accumulé au courrent</legend>
+  <p>
+    <input type="number" id="acc-input">
+    <button (click)="acc()">Calculé</button>
+  </p>
+  <label>
+    Nouveau nombre actuel
+    <p id="acc"></p>
+  </label>
+</fieldset>
+
 <router-outlet></router-outlet>

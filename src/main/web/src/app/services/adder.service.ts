@@ -1,8 +1,10 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AdderService {
   constructor(private _http: HttpClient) {}
 
@@ -11,7 +13,7 @@ export class AdderService {
   }
 
   public add(num: number): Observable<number> {
-    return this._http.post<number>('/adder/', num)
+    return this._http.post<number>('/adder', num)
   }
 
   public acc(num: number): Observable<number> {
