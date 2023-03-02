@@ -1,7 +1,7 @@
 <fieldset>
   <legend>Récupération du nombre</legend>
   <p>
-    <button (click)="getCurrent()">Récupérer le nombre actuel</button>
+    <button id="current-button" (click)="getCurrent()">Récupérer le nombre actuel</button>
   </p>
   <label>
     Nombre actuel
@@ -13,7 +13,7 @@
   <legend>Ajouter au nombre actuel</legend>
   <p>
     <input type="number" id="add-input">
-    <button (click)="add()">Calculer</button>
+    <button id="add-button" (click)="add()">Calculer</button>
   </p>
   <label>
     Nombre obtenue
@@ -25,7 +25,7 @@
   <legend>Accumuler au nombre actuel</legend>
   <p>
     <input type="number" id="acc-input">
-    <button (click)="acc()">Calculer</button>
+    <button id="acc-button" (click)="acc()">Calculer</button>
   </p>
   <label>
     Nouveau nombre actuel
