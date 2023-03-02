@@ -7,6 +7,7 @@ WORKDIR /app
 COPY . /app/
 RUN dos2unix mvnw
 RUN chmod +x mvnw
+RUN ./mvnw frontend:install-node-and-npm
 RUN ./mvnw dependency:go-offline
 RUN ./mvnw compile
 CMD ["./mvnw", "spring-boot:run"]
